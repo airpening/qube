@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+            <Chronometer
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/Timer"
+                android:allowUndo="false"
+                android:textSize="35dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_weight="0.3"
+                android:textAlignment="center"
+                android:singleLine="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0"
+                android:id="@+id/Score"
+                android:layout_weight="0.7"
+                android:textSize="35dp"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/gamelayout"
+            android:minHeight="330dp"
+            android:minWidth="330dp"
+            android:nestedScrollingEnabled="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/gameview"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="330dp"
+                android:minWidth="330dp"
+                android:contextClickable="false"
+                android:cropToPadding="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="▶"
+                android:id="@+id/button"
+                android:layout_weight="0.33"
+                android:textSize="30dp"
+                android:onClick="OnClickStart" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="||"
+                android:id="@+id/button2"
+                android:layout_weight="0.33"
+                android:textSize="30dp"
+                android:onClick="OnClickPause" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="■"
+                android:id="@+id/button3"
+                android:layout_weight="0.33"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
